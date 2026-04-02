@@ -1,0 +1,100 @@
+body {
+  margin:0;
+  font-family:'Segoe UI';
+  background:#020617;
+  color:white;
+}
+
+/* NAV */
+.nav {
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  position:fixed;
+  width:100%;
+  background:rgba(2,6,23,0.8);
+  backdrop-filter:blur(10px);
+}
+
+.nav a {
+  color:#94a3b8;
+  margin:0 10px;
+}
+
+/* HERO */
+.hero {
+  display:flex;
+  height:100vh;
+  align-items:center;
+  padding:50px;
+}
+
+.hero-left {
+  width:50%;
+}
+
+.hero-right img {
+  width:400px;
+  border-radius:20px;
+}
+
+.hero h1 {
+  font-size:60px;
+}
+
+.hero span {
+  color:#22d3ee;
+}
+
+button {
+  background:#22d3ee;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+}
+
+/* TIMELINE */
+.timeline {
+  padding:100px 50px;
+}
+
+.timeline-item {
+  display:flex;
+  align-items:center;
+  margin:30px 0;
+}
+
+.dot {
+  width:10px;
+  height:10px;
+  background:#22d3ee;
+  border-radius:50%;
+  margin-right:20px;
+}
+
+/* PROYECTOS */
+.projects {
+  padding:50px;
+}
+
+.cards {
+  display:flex;
+  gap:20px;
+}
+
+.card {
+  background:#0f172a;
+  padding:20px;
+  border-radius:15px;
+  width:300px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-10px);
+}
+
+.card img {
+  width:100%;
+  border-radius:10px;
+}
