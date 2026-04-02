@@ -3,88 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portafolio</title>
+<title>René Guzmán | Embedded Systems</title>
 
-<style>
-body {
-  margin:0;
-  font-family: 'Segoe UI';
-  background:#0f172a;
-  color:white;
-}
-
-.container {
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
-}
-
-h1 {
-  color:#c6a96b;
-  font-size:40px;
-}
-
-.card {
-  background:#1e293b;
-  padding:20px;
-  border-radius:15px;
-  margin-top:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.4);
-}
-
-.project {
-  margin-top:15px;
-  padding:15px;
-  background:#020617;
-  border-radius:10px;
-}
-
-button {
-  padding:10px 20px;
-  background:#c6a96b;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-}
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<!-- NAV -->
+<header class="nav">
+  <div class="logo">RENÉ.GZ</div>
+  <nav>
+    <a href="#about">Sobre mí</a>
+    <a href="#exp">Experiencia</a>
+    <a href="#projects">Proyectos</a>
+  </nav>
+</header>
 
-<h1>Tu Nombre</h1>
-<p>Ingeniero en Automatización | Sistemas Embebidos | ESP32</p>
+<!-- HERO -->
+<section id="about" class="hero">
+  <div class="hero-left">
+    <h1>ENGINEERING <span>THE CORE</span></h1>
+    <p>
+      Desarrollo de sistemas embebidos, automatización industrial
+      y control inteligente con ESP32.
+    </p>
+    <button onclick="scrollToSection('projects')">Ver proyectos</button>
+  </div>
 
-<div class="card">
-<h2>Sobre mí</h2>
-<p>
-Especialista en desarrollo de sistemas de control, automatización industrial y soluciones con ESP32.
-</p>
-</div>
+  <div class="hero-right">
+    <img src="img/pcb.jpg">
+  </div>
+</section>
 
-<div class="card">
-<h2>Proyectos</h2>
+<!-- EXPERIENCIA -->
+<section id="exp" class="timeline">
 
-<div class="project">
-<h3>Dosificador automático con ESP32</h3>
-<p>Sistema de control por peso con válvula proporcional y comunicación serial.</p>
-</div>
+  <h2>Experiencia Profesional</h2>
 
-<div class="project">
-<h3>HMI Web para control industrial</h3>
-<p>Interfaz web en tiempo real para monitoreo y control.</p>
-</div>
+  <div class="timeline-item">
+    <div class="dot"></div>
+    <div class="content">
+      <h3>Ingeniero en Automatización</h3>
+      <p>Control de dosificación por peso con ESP32 y HMI web.</p>
+    </div>
+  </div>
 
-</div>
+  <div class="timeline-item">
+    <div class="dot"></div>
+    <div class="content">
+      <h3>Diseño Electrónico</h3>
+      <p>Diseño PCB, comunicación serial y control industrial.</p>
+    </div>
+  </div>
 
-<div class="card">
-<h2>Contacto</h2>
-<p>Email: tucorreo@gmail.com</p>
-</div>
+</section>
 
-</div>
+<!-- PROYECTOS -->
+<section id="projects" class="projects">
+
+  <h2>Proyectos</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="img/esp32.jpg">
+      <h3>Dosificador automático</h3>
+      <p>Control preciso por peso con válvula proporcional.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/project1.jpg">
+      <h3>HMI Web ESP32</h3>
+      <p>Interfaz web en tiempo real para monitoreo industrial.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
