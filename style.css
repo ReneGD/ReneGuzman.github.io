@@ -34,28 +34,26 @@ body{
   padding:80px;
 }
 
-.grid{
+.timeline .item{
+  margin:30px 0;
+  padding:20px;
+  border-left:2px solid #22d3ee;
+}
+
+.skills{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:20px;
 }
 
-.card{
+.skills div{
   background:#0f172a;
   padding:20px;
-  border-radius:15px;
-  transition:0.3s;
+  border-radius:10px;
 }
 
-.card:hover{
-  transform:translateY(-10px);
-  border:1px solid #22d3ee;
-}
-
-.skills span{
-  display:inline-block;
-  margin:10px;
-  padding:10px;
+.edu{
   background:#0f172a;
+  padding:20px;
   border-radius:10px;
 }
