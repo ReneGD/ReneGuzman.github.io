@@ -3,86 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>René Guzmán | Embedded Systems</title>
+
+<title>René Guzmán | Embedded Systems Engineer</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAV -->
 <header class="nav">
   <div class="logo">RENÉ.GZ</div>
   <nav>
     <a href="#about">Sobre mí</a>
-    <a href="#exp">Experiencia</a>
     <a href="#projects">Proyectos</a>
+    <a href="#skills">Skills</a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section id="about" class="hero">
-  <div class="hero-left">
-    <h1>ENGINEERING <span>THE CORE</span></h1>
-    <p>
-      Desarrollo de sistemas embebidos, automatización industrial
-      y control inteligente con ESP32.
-    </p>
-    <button onclick="scrollToSection('projects')">Ver proyectos</button>
-  </div>
-
-  <div class="hero-right">
-    <img src="img/pcb.jpg">
-  </div>
+<section class="hero">
+  <h1>ENGINEERING <span>INTELLIGENT SYSTEMS</span></h1>
+  <p>Embedded Systems | Automatización | IoT</p>
 </section>
 
-<!-- EXPERIENCIA -->
-<section id="exp" class="timeline">
-
-  <h2>Experiencia Profesional</h2>
-
-  <div class="timeline-item">
-    <div class="dot"></div>
-    <div class="content">
-      <h3>Ingeniero en Automatización</h3>
-      <p>Control de dosificación por peso con ESP32 y HMI web.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="dot"></div>
-    <div class="content">
-      <h3>Diseño Electrónico</h3>
-      <p>Diseño PCB, comunicación serial y control industrial.</p>
-    </div>
-  </div>
-
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>Sobre mí</h2>
+  <p>
+Ingeniero en Electrónica especializado en el desarrollo de soluciones completas 
+desde el diseño hasta la implementación. Experiencia en sistemas embebidos, 
+automatización industrial e IoT, con enfoque en optimización de procesos y análisis de datos.
+  </p>
 </section>
 
 <!-- PROYECTOS -->
-<section id="projects" class="projects">
+<section id="projects" class="section">
 
-  <h2>Proyectos</h2>
+<h2>Proyectos Destacados</h2>
 
-  <div class="cards">
+<div class="grid">
 
-    <div class="card">
-      <img src="img/esp32.jpg">
-      <h3>Dosificador automático</h3>
-      <p>Control preciso por peso con válvula proporcional.</p>
-    </div>
+<div class="card">
+<h3>Dosificación automática por peso</h3>
+<p>Sistema para dosificación de líquidos de diferentes viscosidades utilizando control por pesaje y automatización industrial.</p>
+</div>
 
-    <div class="card">
-      <img src="img/project1.jpg">
-      <h3>HMI Web ESP32</h3>
-      <p>Interfaz web en tiempo real para monitoreo industrial.</p>
-    </div>
+<div class="card">
+<h3>Monitoreo de tostado de café</h3>
+<p>Sistema de adquisición de señales en tiempo real para análisis térmico y sensorial en procesos industriales.</p>
+</div>
 
-  </div>
+<div class="card">
+<h3>Supervisión de niveles en depósitos</h3>
+<p>Solución IoT para monitoreo remoto con retroalimentación visual y control logístico.</p>
+</div>
+
+<div class="card">
+<h3>Software de inventarios</h3>
+<p>Plataforma con trazabilidad, interfaz amigable y sincronización con dispositivos externos.</p>
+</div>
+
+<div class="card">
+<h3>Control de electroválvulas</h3>
+<p>Unidad electrónica secuenciadora con menú de configuración para control industrial.</p>
+</div>
+
+<div class="card">
+<h3>Tarjeta de medición de volumen</h3>
+<p>Desarrollo de sistema electrónico para medición de volumen en plantas de concreto.</p>
+</div>
+
+<div class="card">
+<h3>Sistema ECG biomédico</h3>
+<p>Adquisición y procesamiento de señales cardíacas con análisis de frecuencia y variabilidad.</p>
+</div>
+
+<div class="card">
+<h3>Control remoto cinta radial</h3>
+<p>Automatización industrial con enfoque en confiabilidad operativa.</p>
+</div>
+
+</div>
 
 </section>
 
-<script src="script.js"></script>
+<!-- SKILLS -->
+<section id="skills" class="section">
+<h2>Skills</h2>
+
+<div class="skills">
+<span>ESP32</span>
+<span>Python</span>
+<span>C/C++</span>
+<span>MATLAB</span>
+<span>PCB Design</span>
+<span>IoT</span>
+<span>Signal Processing</span>
+</div>
+
+</section>
 
 </body>
 </html>
