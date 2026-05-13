@@ -14,26 +14,26 @@
       theme: {
         extend: {
           colors: {
-            "surface-dim": "#0c0a08",
-            "surface-container-high": "#2a241d",
-            "surface-container": "#1e1a16",
-            "surface-container-low": "#161310",
-            "surface": "#14110e",
-            "surface-tint": "#c4a574",
-            "primary": "#f2eadf",
-            "primary-container": "#5c4d3a",
-            "primary-fixed": "#e8d4b8",
-            "primary-fixed-dim": "#c4a574",
-            "surface-variant": "#3a322a",
-            "secondary-container": "#2f2922",
-            "secondary-fixed": "#c9b8a4",
-            "background": "#100d0a",
-            "on-surface": "#ebe3d9",
-            "on-surface-variant": "#9a8f82",
-            "on-background": "#ebe3d9",
-            "on-primary-fixed": "#1a1510",
-            "surface-container-lowest": "#0a0807",
-            "outline": "#5c5349",
+            "surface-dim": "#020617",
+            "surface-container-high": "#334155",
+            "surface-container": "#1e293b",
+            "surface-container-low": "#0f172a",
+            "surface": "#0f172a",
+            "surface-tint": "#3b82f6",
+            "primary": "#f8fafc",
+            "primary-container": "#1e40af",
+            "primary-fixed": "#60a5fa",
+            "primary-fixed-dim": "#3b82f6",
+            "surface-variant": "#334155",
+            "secondary-container": "#172554",
+            "secondary-fixed": "#cbd5e1",
+            "background": "#0a0f1c",
+            "on-surface": "#f1f5f9",
+            "on-surface-variant": "#94a3b8",
+            "on-background": "#f1f5f9",
+            "on-primary-fixed": "#ffffff",
+            "surface-container-lowest": "#020617",
+            "outline": "#475569",
           },
           borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" },
           spacing: {
@@ -69,23 +69,23 @@
   </script>
   <style>
     .glass-card {
-      background: rgba(232, 212, 184, 0.04);
+      background: rgba(59, 130, 246, 0.05);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(232, 212, 184, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.12);
     }
     .glass-card-strong {
-      background: linear-gradient(145deg, rgba(232, 212, 184, 0.06) 0%, rgba(20, 17, 14, 0.4) 100%);
+      background: linear-gradient(145deg, rgba(59, 130, 246, 0.08) 0%, rgba(15, 23, 42, 0.55) 100%);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(232, 212, 184, 0.09);
+      border: 1px solid rgba(148, 163, 184, 0.14);
     }
     .hero-gradient {
-      background: radial-gradient(ellipse 90% 70% at 50% 0%, #1e1a16 0%, #100d0a 50%, #0a0807 100%);
+      background: radial-gradient(ellipse 90% 70% at 50% 0%, #1e293b 0%, #0a0f1c 55%, #020617 100%);
     }
     .accent-glow {
-      box-shadow: 0 0 32px 0 rgba(196, 165, 116, 0.12);
+      box-shadow: 0 0 36px 0 rgba(59, 130, 246, 0.2);
     }
     .timeline-line {
-      background: linear-gradient(to bottom, transparent, rgba(196, 165, 116, 0.45) 14%, rgba(196, 165, 116, 0.45) 86%, transparent);
+      background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.55) 14%, rgba(59, 130, 246, 0.55) 86%, transparent);
     }
     .project-img-container {
       filter: grayscale(100%);
@@ -96,16 +96,16 @@
       transform: scale(1.02);
     }
     .interactive-glow:hover {
-      box-shadow: 0 0 24px 0 rgba(196, 165, 116, 0.1);
+      box-shadow: 0 0 28px 0 rgba(59, 130, 246, 0.18);
     }
     .skill-glow:hover {
-      box-shadow: 0 0 24px 0 rgba(196, 165, 116, 0.1);
+      box-shadow: 0 0 28px 0 rgba(59, 130, 246, 0.18);
     }
-    .card-hover-sand {
-      transition: box-shadow 0.35s ease;
+    .card-hover-accent {
+      transition: box-shadow 0.35s ease, border-color 0.35s ease;
     }
-    .card-hover-sand:hover {
-      box-shadow: 0 0 28px 0 rgba(196, 165, 116, 0.1);
+    .card-hover-accent:hover {
+      box-shadow: 0 0 32px 0 rgba(59, 130, 246, 0.14);
     }
     .material-symbols-outlined {
       font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
@@ -206,7 +206,7 @@
         <div class="space-y-14 md:space-y-16">
           <article class="relative flex w-full flex-col items-stretch md:flex-row md:items-center md:justify-between">
             <div class="order-2 mt-8 pl-10 md:order-1 md:mt-0 md:w-[45%] md:pl-0">
-              <div class="glass-card-strong card-hover-sand rounded-lg p-6 md:p-7">
+              <div class="glass-card-strong card-hover-accent rounded-lg p-6 md:p-7">
                 <span class="mb-2 block font-label-caps text-label-caps text-primary-fixed-dim">Actual</span>
                 <h3 class="font-headline-md text-headline-md text-on-surface">I.S.I Ingeniería y Servicios Industriales</h3>
                 <p class="mt-1 font-body-md text-secondary-fixed">Automatización e IoT</p>
@@ -218,7 +218,7 @@
               </div>
             </div>
             <div class="absolute left-4 z-10 flex h-full items-start pt-2 md:left-1/2 md:-translate-x-1/2 md:items-center md:pt-0">
-              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_12px_rgba(196,165,116,0.35)] ring-4 ring-background"></div>
+              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_14px_rgba(59,130,246,0.55)] ring-4 ring-background"></div>
             </div>
             <div class="order-1 pl-10 md:order-2 md:w-[45%] md:pl-0 md:text-right">
               <span class="mb-2 block font-label-caps text-label-caps text-on-surface-variant">Enero 2025 — Presente</span>
@@ -236,10 +236,10 @@
               </div>
             </div>
             <div class="absolute left-4 z-10 flex items-center md:left-1/2 md:-translate-x-1/2">
-              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_12px_rgba(196,165,116,0.35)] ring-4 ring-background"></div>
+              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_14px_rgba(59,130,246,0.55)] ring-4 ring-background"></div>
             </div>
             <div class="order-2 mt-8 pl-10 md:mt-0 md:w-[45%] md:pl-0">
-              <div class="glass-card-strong card-hover-sand rounded-lg p-6 md:p-7">
+              <div class="glass-card-strong card-hover-accent rounded-lg p-6 md:p-7">
                 <h3 class="font-headline-md text-headline-md text-on-surface">Laboratorio de Ciencias Biológicas</h3>
                 <p class="mt-1 font-body-md text-secondary-fixed">ECG · investigación</p>
                 <ul class="mt-3 list-disc space-y-1.5 pl-4 font-body-md text-on-surface-variant">
@@ -251,7 +251,7 @@
 
           <article class="relative flex w-full flex-col items-stretch md:flex-row md:items-center md:justify-between">
             <div class="order-2 mt-8 pl-10 md:order-1 md:mt-0 md:w-[45%] md:pl-0">
-              <div class="glass-card-strong card-hover-sand rounded-lg p-6 md:p-7">
+              <div class="glass-card-strong card-hover-accent rounded-lg p-6 md:p-7">
                 <h3 class="font-headline-md text-headline-md text-on-surface">Freelance</h3>
                 <p class="mt-1 font-body-md text-secondary-fixed">Soporte técnico</p>
                 <ul class="mt-3 list-disc space-y-1.5 pl-4 font-body-md text-on-surface-variant">
@@ -261,7 +261,7 @@
               </div>
             </div>
             <div class="absolute left-4 z-10 flex items-center md:left-1/2 md:-translate-x-1/2">
-              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_12px_rgba(196,165,116,0.35)] ring-4 ring-background"></div>
+              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_14px_rgba(59,130,246,0.55)] ring-4 ring-background"></div>
             </div>
             <div class="order-1 pl-10 md:order-2 md:w-[45%] md:pl-0 md:text-right">
               <span class="mb-2 block font-label-caps text-label-caps text-on-surface-variant">Noviembre 2023 — Enero 2025</span>
@@ -279,10 +279,10 @@
               </div>
             </div>
             <div class="absolute left-4 z-10 flex items-center md:left-1/2 md:-translate-x-1/2">
-              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_12px_rgba(196,165,116,0.35)] ring-4 ring-background"></div>
+              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_14px_rgba(59,130,246,0.55)] ring-4 ring-background"></div>
             </div>
             <div class="order-2 mt-8 pl-10 md:mt-0 md:w-[45%] md:pl-0">
-              <div class="glass-card-strong card-hover-sand rounded-lg p-6 md:p-7">
+              <div class="glass-card-strong card-hover-accent rounded-lg p-6 md:p-7">
                 <h3 class="font-headline-md text-headline-md text-on-surface">TCPU</h3>
                 <p class="mt-1 font-body-md text-secondary-fixed">Hardware</p>
                 <ul class="mt-3 list-disc space-y-1.5 pl-4 font-body-md text-on-surface-variant">
@@ -294,7 +294,7 @@
 
           <article class="relative flex w-full flex-col items-stretch md:flex-row md:items-center md:justify-between">
             <div class="order-2 mt-8 pl-10 md:order-1 md:mt-0 md:w-[45%] md:pl-0">
-              <div class="glass-card-strong card-hover-sand rounded-lg p-6 md:p-7">
+              <div class="glass-card-strong card-hover-accent rounded-lg p-6 md:p-7">
                 <h3 class="font-headline-md text-headline-md text-on-surface">Laboratorio Intel BUAP</h3>
                 <p class="mt-1 font-body-md text-secondary-fixed">Innovación</p>
                 <ul class="mt-3 list-disc space-y-1.5 pl-4 font-body-md text-on-surface-variant">
@@ -303,7 +303,7 @@
               </div>
             </div>
             <div class="absolute left-4 z-10 flex items-center md:left-1/2 md:-translate-x-1/2">
-              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_12px_rgba(196,165,116,0.35)] ring-4 ring-background"></div>
+              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_14px_rgba(59,130,246,0.55)] ring-4 ring-background"></div>
             </div>
             <div class="order-1 pl-10 md:order-2 md:w-[45%] md:pl-0 md:text-right">
               <span class="mb-2 block font-label-caps text-label-caps text-on-surface-variant">2022 — 2023</span>
