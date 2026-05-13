@@ -14,26 +14,26 @@
       theme: {
         extend: {
           colors: {
-            "surface-dim": "#051424",
-            "surface-container-high": "#1c2b3c",
-            "surface-container": "#122131",
-            "surface-container-low": "#0d1c2d",
-            "surface": "#051424",
-            "surface-tint": "#00dbe9",
-            "primary": "#dbfcff",
-            "primary-container": "#00f0ff",
-            "primary-fixed": "#7df4ff",
-            "primary-fixed-dim": "#00dbe9",
-            "surface-variant": "#273647",
-            "secondary-container": "#3e495d",
-            "secondary-fixed": "#d8e3fb",
-            "background": "#051424",
-            "on-surface": "#d4e4fa",
-            "on-surface-variant": "#b9cacb",
-            "on-background": "#d4e4fa",
-            "on-primary-fixed": "#002022",
-            "surface-container-lowest": "#010f1f",
-            "outline": "#849495",
+            "surface-dim": "#0c0a08",
+            "surface-container-high": "#2a241d",
+            "surface-container": "#1e1a16",
+            "surface-container-low": "#161310",
+            "surface": "#14110e",
+            "surface-tint": "#c4a574",
+            "primary": "#f2eadf",
+            "primary-container": "#5c4d3a",
+            "primary-fixed": "#e8d4b8",
+            "primary-fixed-dim": "#c4a574",
+            "surface-variant": "#3a322a",
+            "secondary-container": "#2f2922",
+            "secondary-fixed": "#c9b8a4",
+            "background": "#100d0a",
+            "on-surface": "#ebe3d9",
+            "on-surface-variant": "#9a8f82",
+            "on-background": "#ebe3d9",
+            "on-primary-fixed": "#1a1510",
+            "surface-container-lowest": "#0a0807",
+            "outline": "#5c5349",
           },
           borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" },
           spacing: {
@@ -57,8 +57,8 @@
           fontSize: {
             "headline-md": ["30px", { lineHeight: "1.3", fontWeight: "600" }],
             "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
-            "display-lg": ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
-            "headline-lg": ["48px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "display-lg": ["56px", { lineHeight: "1.12", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "headline-lg": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
             "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "500" }],
             "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
             "body-lg": ["18px", { lineHeight: "1.7", fontWeight: "400" }],
@@ -69,26 +69,23 @@
   </script>
   <style>
     .glass-card {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(232, 212, 184, 0.04);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(232, 212, 184, 0.08);
     }
     .glass-card-strong {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: linear-gradient(145deg, rgba(232, 212, 184, 0.06) 0%, rgba(20, 17, 14, 0.4) 100%);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(232, 212, 184, 0.09);
     }
     .hero-gradient {
-      background: radial-gradient(circle at 50% 40%, #122131 0%, #051424 55%, #010f1f 100%);
+      background: radial-gradient(ellipse 90% 70% at 50% 0%, #1e1a16 0%, #100d0a 50%, #0a0807 100%);
     }
     .accent-glow {
-      box-shadow: 0 0 40px 0 rgba(0, 219, 233, 0.15);
-    }
-    .text-glow {
-      text-shadow: 0 0 20px rgba(0, 219, 233, 0.3);
+      box-shadow: 0 0 32px 0 rgba(196, 165, 116, 0.12);
     }
     .timeline-line {
-      background: linear-gradient(to bottom, transparent, #00dbe9 12%, #00dbe9 88%, transparent);
+      background: linear-gradient(to bottom, transparent, rgba(196, 165, 116, 0.45) 14%, rgba(196, 165, 116, 0.45) 86%, transparent);
     }
     .project-img-container {
       filter: grayscale(100%);
@@ -99,10 +96,16 @@
       transform: scale(1.02);
     }
     .interactive-glow:hover {
-      box-shadow: 0 0 20px 0 rgba(0, 219, 233, 0.15);
+      box-shadow: 0 0 24px 0 rgba(196, 165, 116, 0.1);
     }
     .skill-glow:hover {
-      box-shadow: 0 0 20px 0 rgba(0, 219, 233, 0.15);
+      box-shadow: 0 0 24px 0 rgba(196, 165, 116, 0.1);
+    }
+    .card-hover-sand {
+      transition: box-shadow 0.35s ease;
+    }
+    .card-hover-sand:hover {
+      box-shadow: 0 0 28px 0 rgba(196, 165, 116, 0.1);
     }
     .material-symbols-outlined {
       font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
@@ -112,13 +115,13 @@
     }
   </style>
 </head>
-<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed antialiased">
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim/30 selection:text-on-background antialiased">
   <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-primary-fixed-dim focus:px-4 focus:py-2 focus:text-on-primary-fixed">Ir al contenido</a>
 
-  <header class="fixed top-0 z-50 w-full border-b border-white/10 bg-surface/80 shadow-sm backdrop-blur-lg">
+  <header class="fixed top-0 z-50 w-full border-b border-outline/25 bg-surface/85 shadow-sm backdrop-blur-md">
     <nav class="mx-auto flex h-20 max-w-container-max items-center justify-between px-margin-mobile md:px-margin-desktop" aria-label="Principal">
       <a href="#inicio" class="font-headline-md text-headline-md font-bold text-on-surface">RENÉ<span class="text-primary-fixed-dim">.</span>GZ</a>
-      <div id="nav-links" class="absolute left-0 right-0 top-20 hidden flex-col gap-1 border-b border-white/10 bg-surface/95 p-4 backdrop-blur-lg md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0">
+      <div id="nav-links" class="absolute left-0 right-0 top-20 hidden flex-col gap-1 border-b border-outline/25 bg-surface/95 p-4 backdrop-blur-md md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0">
         <a class="nav-item font-body-md text-body-md text-on-surface-variant transition-colors hover:text-on-surface" href="#inicio">Perfil</a>
         <a class="nav-item font-body-md text-body-md text-on-surface-variant transition-colors hover:text-on-surface" href="#experiencia">Experiencia</a>
         <a class="nav-item font-body-md text-body-md text-on-surface-variant transition-colors hover:text-on-surface" href="#proyectos">Proyectos</a>
@@ -127,8 +130,8 @@
         <a class="nav-item font-body-md text-body-md text-on-surface-variant transition-colors hover:text-on-surface md:hidden" href="#contacto">Contacto</a>
       </div>
       <div class="flex items-center gap-3">
-        <a href="#contacto" class="hidden rounded-lg bg-primary-fixed-dim px-5 py-2 font-label-caps text-label-caps text-on-primary-fixed transition-all hover:bg-primary-fixed active:scale-95 md:inline-block">Contacto</a>
-        <button type="button" id="nav-toggle" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-on-surface md:hidden" aria-expanded="false" aria-controls="nav-links">
+        <a href="#contacto" class="hidden rounded-md border border-primary-fixed-dim/40 px-4 py-2 font-label-caps text-label-caps text-primary-fixed-dim transition-colors hover:border-primary-fixed-dim hover:bg-primary-fixed-dim/10 md:inline-block">Contacto</a>
+        <button type="button" id="nav-toggle" class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-outline/40 text-on-surface md:hidden" aria-expanded="false" aria-controls="nav-links">
           <span class="material-symbols-outlined" aria-hidden="true">menu</span>
         </button>
       </div>
@@ -137,59 +140,52 @@
 
   <main id="contenido">
     <!-- Perfil / hero -->
-    <section id="inicio" class="hero-gradient relative min-h-screen overflow-hidden pt-20">
-      <div class="pointer-events-none absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-primary-fixed-dim/10 blur-[120px]"></div>
-      <div class="pointer-events-none absolute bottom-1/4 right-1/4 h-[500px] w-[500px] rounded-full bg-secondary-container/10 blur-[150px]"></div>
-      <div class="relative z-10 mx-auto flex max-w-container-max flex-col gap-12 px-margin-mobile py-16 md:px-margin-desktop md:py-24">
-        <div class="space-y-4">
-          <span class="block border-l-2 border-primary-fixed-dim pl-4 font-label-caps text-label-caps tracking-[0.2em] text-primary-fixed-dim">RENÉ GUZMÁN DIMAYUGA · PUEBLA, MÉXICO</span>
-          <h1 class="max-w-4xl font-display-lg text-display-lg text-white md:text-[clamp(2.5rem,6vw,4.5rem)]">
-            Ingeniería con <span class="text-glow italic text-primary-fixed-dim">precisión técnica</span> de extremo a extremo.
+    <section id="inicio" class="hero-gradient relative min-h-[88vh] overflow-hidden pt-20">
+      <div class="pointer-events-none absolute left-1/4 top-1/4 h-80 w-80 rounded-full bg-primary-fixed-dim/8 blur-[100px]"></div>
+      <div class="pointer-events-none absolute bottom-0 right-1/4 h-72 w-72 rounded-full bg-primary-fixed/5 blur-[90px]"></div>
+      <div class="relative z-10 mx-auto flex max-w-container-max flex-col gap-10 px-margin-mobile py-14 md:px-margin-desktop md:py-20">
+        <div class="max-w-3xl space-y-5">
+          <p class="font-label-caps text-label-caps tracking-[0.14em] text-on-surface-variant">RENÉ GUZMÁN DIMAYUGA — PUEBLA, MÉXICO</p>
+          <h1 class="font-display-lg text-display-lg tracking-tight text-on-surface md:text-[clamp(2rem,4.5vw,3.25rem)]">
+            Ingeniero en Electrónica. Diseño de hardware, firmware y sistemas de adquisición aplicados a automatización industrial e IoT.
           </h1>
-          <p class="max-w-2xl font-body-md text-on-surface-variant">Teléfono +52 2222381962 · <a class="text-primary-fixed-dim underline-offset-2 hover:underline" href="mailto:rene.dimayuga98@gmail.com">rene.dimayuga98@gmail.com</a></p>
+          <p class="max-w-xl font-body-md text-on-surface-variant">+52 2222381962 · <a class="text-primary-fixed-dim underline-offset-4 hover:underline" href="mailto:rene.dimayuga98@gmail.com">rene.dimayuga98@gmail.com</a></p>
         </div>
-        <div class="grid w-full grid-cols-1 gap-6 md:grid-cols-12">
-          <div class="glass-card flex flex-col justify-between space-y-6 rounded-xl p-8 md:col-span-7 md:p-10">
-            <div class="space-y-4">
-              <h2 class="font-headline-md text-headline-md text-on-surface">Perfil profesional</h2>
-              <p class="font-body-lg text-body-lg leading-relaxed text-on-surface-variant">
-                Ingeniero en Electrónica con sólida experiencia en el desarrollo e implementación de soluciones técnicas. Capaz de participar en todas las etapas de un proyecto: desde el análisis de requerimientos, diseño, integración de hardware y software, hasta pruebas y puesta en marcha. Conocimientos en programación, electrónica, sistemas embebidos y automatización. Destacado por su enfoque práctico, resolución de problemas, pensamiento crítico y capacidad para trabajar de forma autónoma o en equipo. Interesado en aplicar sus habilidades en entornos dinámicos donde la tecnología y la innovación sean clave para mejorar procesos y productos.
+        <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-12 md:items-stretch">
+          <div class="glass-card flex flex-col justify-between gap-6 rounded-lg p-7 md:col-span-7 md:p-8">
+            <div class="space-y-3">
+              <h2 class="font-label-caps text-label-caps text-primary-fixed-dim">Perfil</h2>
+              <p class="font-body-md leading-relaxed text-on-surface-variant md:max-w-xl">
+                Electrónica, embebidos y señales: de requisitos y esquemático a pruebas en campo. Enfoque en control, instrumentación y software de apoyo (Python, Apps Script).
               </p>
             </div>
-            <div>
-              <a href="#proyectos" class="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-label-caps text-label-caps text-black transition-all duration-300 hover:bg-primary-fixed-dim accent-glow">
-                Ver proyectos
-                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
-              </a>
-            </div>
+            <a href="#proyectos" class="group inline-flex w-fit items-center gap-2 border border-primary-fixed-dim/45 px-5 py-2.5 font-label-caps text-label-caps text-primary-fixed-dim transition-colors hover:bg-primary-fixed-dim/12">
+              Proyectos
+              <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-0.5" aria-hidden="true">arrow_forward</span>
+            </a>
           </div>
-          <div class="glass-card relative aspect-square overflow-hidden rounded-xl md:col-span-5 md:aspect-auto md:min-h-[280px]">
+          <div class="glass-card relative min-h-[220px] overflow-hidden rounded-lg md:col-span-5 md:min-h-0">
             <img
-              alt="Laboratorio e instrumentación electrónica"
-              class="h-full w-full object-cover opacity-70 grayscale transition-all duration-700 hover:scale-105 hover:grayscale-0"
+              alt="Instrumentación electrónica"
+              class="h-full min-h-[220px] w-full object-cover opacity-55 grayscale md:min-h-full"
               src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3370?auto=format&fit=crop&w=1200&q=80"
               width="800"
-              height="800"
+              height="600"
               loading="eager"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
           </div>
-          <div class="glass-card flex flex-col items-center justify-center gap-2 rounded-xl p-8 text-center md:col-span-4">
-            <span class="material-symbols-outlined text-[40px] text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1">precision_manufacturing</span>
-            <span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Automatización industrial</span>
-          </div>
-          <div class="glass-card flex flex-col items-center justify-center gap-2 rounded-xl p-8 text-center md:col-span-4">
-            <span class="material-symbols-outlined text-[40px] text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1">sensors</span>
-            <span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Adquisición de señales</span>
-          </div>
-          <div class="glass-card flex flex-col items-center justify-center gap-2 rounded-xl p-8 text-center md:col-span-4">
-            <span class="material-symbols-outlined text-[40px] text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1">memory</span>
-            <span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Firmware y control</span>
+          <div class="flex flex-wrap gap-x-10 gap-y-2 border-t border-outline/25 pt-6 font-label-caps text-label-caps text-on-surface-variant md:col-span-12">
+            <span>Automatización</span>
+            <span>Adquisición de señales</span>
+            <span>Firmware</span>
+            <span>PCB</span>
+            <span>IoT</span>
           </div>
         </div>
       </div>
-      <div class="border-y border-white/5 bg-surface-container-lowest/50 py-10">
-        <div class="mx-auto flex max-w-container-max flex-wrap items-center justify-between gap-6 px-margin-mobile opacity-70 transition-opacity hover:opacity-100 md:px-margin-desktop">
+      <div class="border-t border-outline/20 bg-surface-container-low/80 py-8">
+        <div class="mx-auto flex max-w-container-max flex-wrap gap-x-8 gap-y-3 px-margin-mobile text-on-surface-variant md:px-margin-desktop">
           <span class="font-label-caps text-label-caps">PYTHON · C/C++ · MATLAB</span>
           <span class="font-label-caps text-label-caps">JAVASCRIPT · HTML · GIT</span>
           <span class="font-label-caps text-label-caps">ESP32 · STM32 · RASPBERRY PI</span>
@@ -201,34 +197,28 @@
 
     <!-- Experiencia -->
     <section id="experiencia" class="bg-background pb-stack-lg pt-28 md:pt-32">
-      <div class="mx-auto mb-16 max-w-container-max px-margin-mobile md:px-margin-desktop">
-        <h2 class="mb-4 font-display-lg text-headline-lg-mobile md:text-display-lg">Trayectoria <span class="text-primary-fixed-dim">profesional</span></h2>
-        <p class="max-w-2xl font-body-lg text-body-lg text-on-surface-variant">
-          Resumen alineado con mi CV: automatización e IoT en I.S.I., investigación biomédica, desarrollo de hardware y laboratorio en BUAP.
-        </p>
+      <div class="mx-auto mb-12 max-w-container-max px-margin-mobile md:px-margin-desktop">
+        <h2 class="mb-2 font-headline-lg text-headline-lg md:text-display-lg">Experiencia</h2>
+        <p class="max-w-lg font-body-md text-on-surface-variant">I.S.I., laboratorio biomédico, consultoría, TCPU y BUAP.</p>
       </div>
       <div class="relative mx-auto max-w-container-max px-margin-mobile md:px-margin-desktop">
         <div class="absolute bottom-0 left-4 top-0 w-px timeline-line md:left-1/2 md:-translate-x-1/2"></div>
-        <div class="space-y-20 md:space-y-24">
+        <div class="space-y-14 md:space-y-16">
           <article class="relative flex w-full flex-col items-stretch md:flex-row md:items-center md:justify-between">
             <div class="order-2 mt-8 pl-10 md:order-1 md:mt-0 md:w-[45%] md:pl-0">
-              <div class="glass-card-strong rounded-xl p-8 transition-all duration-500 hover:shadow-[0_0_20px_rgba(0,219,233,0.15)]">
-                <span class="mb-2 block font-label-caps text-label-caps uppercase text-primary-fixed-dim">Actual</span>
+              <div class="glass-card-strong card-hover-sand rounded-lg p-6 md:p-7">
+                <span class="mb-2 block font-label-caps text-label-caps text-primary-fixed-dim">Actual</span>
                 <h3 class="font-headline-md text-headline-md text-on-surface">I.S.I Ingeniería y Servicios Industriales</h3>
-                <p class="mt-1 font-body-md text-secondary-fixed">Desarrollador de proyectos de automatización y soluciones IoT</p>
-                <ul class="mt-4 list-disc space-y-2 pl-5 font-body-md text-body-md text-on-surface-variant">
-                  <li>Concepción, ingeniería y puesta en marcha de una solución automatizada para la dosificación de líquidos de variadas viscosidades mediante sistemas de pesaje.</li>
-                  <li>Desarrollo integral de un sistema de adquisición de señales para el monitoreo en tiempo real, visualización y análisis de variables críticas durante el tostado de café, orientado al control sensorial y térmico.</li>
-                  <li>Diseño y ejecución de un sistema inteligente para la supervisión de niveles en depósitos de aditivos, con retroalimentación visual remota para control logístico.</li>
-                  <li>Liderazgo, desarrollo y puesta en operación de software especializado para la administración de inventarios, con interfaz amigable, trazabilidad de insumos y sincronización con dispositivos periféricos.</li>
-                  <li>Ingeniería y construcción de una unidad electrónica secuenciadora con menú de parámetros para control preciso de electroválvulas en sistemas de recolección de polvo industrial.</li>
-                  <li>Diseño y desarrollo de una tarjeta electrónica para contabilización de volumen en litros en plantas de concreto.</li>
-                  <li>Propuesta técnica de dosificación automatizada para planta de concreto, con integración funcional con plataformas de gestión empresarial y control remoto.</li>
+                <p class="mt-1 font-body-md text-secondary-fixed">Automatización e IoT</p>
+                <ul class="mt-3 list-disc space-y-1.5 pl-4 font-body-md text-on-surface-variant">
+                  <li>Dosificación por pesaje, monitoreo de tostado de café, supervisión de depósitos e inventarios con periféricos.</li>
+                  <li>Secuenciador de electroválvulas, tarjetas a medida y propuestas de integración con gestión empresarial.</li>
+                  <li>Control remoto y volumetría en entorno planta de concreto.</li>
                 </ul>
               </div>
             </div>
             <div class="absolute left-4 z-10 flex h-full items-start pt-2 md:left-1/2 md:-translate-x-1/2 md:items-center md:pt-0">
-              <div class="h-4 w-4 rounded-full bg-primary-fixed-dim shadow-[0_0_15px_#00dbe9] ring-4 ring-background"></div>
+              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_12px_rgba(196,165,116,0.35)] ring-4 ring-background"></div>
             </div>
             <div class="order-1 pl-10 md:order-2 md:w-[45%] md:pl-0 md:text-right">
               <span class="mb-2 block font-label-caps text-label-caps text-on-surface-variant">Enero 2025 — Presente</span>
@@ -246,14 +236,14 @@
               </div>
             </div>
             <div class="absolute left-4 z-10 flex items-center md:left-1/2 md:-translate-x-1/2">
-              <div class="h-4 w-4 rounded-full bg-primary-fixed-dim shadow-[0_0_15px_#00dbe9] ring-4 ring-background"></div>
+              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_12px_rgba(196,165,116,0.35)] ring-4 ring-background"></div>
             </div>
             <div class="order-2 mt-8 pl-10 md:mt-0 md:w-[45%] md:pl-0">
-              <div class="glass-card-strong rounded-xl p-8 transition-all duration-500 hover:shadow-[0_0_20px_rgba(0,219,233,0.15)]">
+              <div class="glass-card-strong card-hover-sand rounded-lg p-6 md:p-7">
                 <h3 class="font-headline-md text-headline-md text-on-surface">Laboratorio de Ciencias Biológicas</h3>
-                <p class="mt-1 font-body-md text-secondary-fixed">Investigación · señal electrocardiográfica para investigación biomédica</p>
-                <ul class="mt-4 list-disc space-y-2 pl-5 font-body-md text-body-md text-on-surface-variant">
-                  <li>Diseño, desarrollo e implementación de un sistema para la adquisición y análisis de señales ECG orientado al monitoreo de parámetros cardíacos, con detección de picos, métricas de frecuencia y variabilidad del ritmo, y procesamiento digital para estudios fisiológicos.</li>
+                <p class="mt-1 font-body-md text-secondary-fixed">ECG · investigación</p>
+                <ul class="mt-3 list-disc space-y-1.5 pl-4 font-body-md text-on-surface-variant">
+                  <li>Sistema de adquisición y análisis de ECG: picos, métricas de ritmo y procesamiento digital para estudios fisiológicos.</li>
                 </ul>
               </div>
             </div>
@@ -261,17 +251,17 @@
 
           <article class="relative flex w-full flex-col items-stretch md:flex-row md:items-center md:justify-between">
             <div class="order-2 mt-8 pl-10 md:order-1 md:mt-0 md:w-[45%] md:pl-0">
-              <div class="glass-card-strong rounded-xl p-8 transition-all duration-500 hover:shadow-[0_0_20px_rgba(0,219,233,0.15)]">
-                <h3 class="font-headline-md text-headline-md text-on-surface">Ingeniero freelance</h3>
-                <p class="mt-1 font-body-md text-secondary-fixed">Soporte técnico especializado</p>
-                <ul class="mt-4 list-disc space-y-2 pl-5 font-body-md text-body-md text-on-surface-variant">
-                  <li>Implementación de sistema de control remoto para cinta radial en planta de concreto premezclado, con enfoque en confiabilidad operativa.</li>
-                  <li>Diseño e integración de temporizador electrónico para automatización de filtros recolectores de polvo en silos industriales.</li>
+              <div class="glass-card-strong card-hover-sand rounded-lg p-6 md:p-7">
+                <h3 class="font-headline-md text-headline-md text-on-surface">Freelance</h3>
+                <p class="mt-1 font-body-md text-secondary-fixed">Soporte técnico</p>
+                <ul class="mt-3 list-disc space-y-1.5 pl-4 font-body-md text-on-surface-variant">
+                  <li>Control remoto de cinta radial en planta de concreto premezclado.</li>
+                  <li>Temporizador para filtros recolectores de polvo en silos.</li>
                 </ul>
               </div>
             </div>
             <div class="absolute left-4 z-10 flex items-center md:left-1/2 md:-translate-x-1/2">
-              <div class="h-4 w-4 rounded-full bg-primary-fixed-dim shadow-[0_0_15px_#00dbe9] ring-4 ring-background"></div>
+              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_12px_rgba(196,165,116,0.35)] ring-4 ring-background"></div>
             </div>
             <div class="order-1 pl-10 md:order-2 md:w-[45%] md:pl-0 md:text-right">
               <span class="mb-2 block font-label-caps text-label-caps text-on-surface-variant">Noviembre 2023 — Enero 2025</span>
@@ -289,16 +279,14 @@
               </div>
             </div>
             <div class="absolute left-4 z-10 flex items-center md:left-1/2 md:-translate-x-1/2">
-              <div class="h-4 w-4 rounded-full bg-primary-fixed-dim shadow-[0_0_15px_#00dbe9] ring-4 ring-background"></div>
+              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_12px_rgba(196,165,116,0.35)] ring-4 ring-background"></div>
             </div>
             <div class="order-2 mt-8 pl-10 md:mt-0 md:w-[45%] md:pl-0">
-              <div class="glass-card-strong rounded-xl p-8 transition-all duration-500 hover:shadow-[0_0_20px_rgba(0,219,233,0.15)]">
+              <div class="glass-card-strong card-hover-sand rounded-lg p-6 md:p-7">
                 <h3 class="font-headline-md text-headline-md text-on-surface">TCPU</h3>
-                <p class="mt-1 font-body-md text-secondary-fixed">Desarrollador de hardware</p>
-                <ul class="mt-4 list-disc space-y-2 pl-5 font-body-md text-body-md text-on-surface-variant">
-                  <li>Diseño y fabricación de placas PCB especializadas para equipos de detección de fallas en materiales mediante procesamiento de imágenes.</li>
-                  <li>Modelado tridimensional y producción de componentes mediante impresión 3D.</li>
-                  <li>Ensamblaje e instalación con herramientas de precisión para integración electrónica.</li>
+                <p class="mt-1 font-body-md text-secondary-fixed">Hardware</p>
+                <ul class="mt-3 list-disc space-y-1.5 pl-4 font-body-md text-on-surface-variant">
+                  <li>PCB para equipos de inspección por visión; piezas en 3D y ensamble de precisión.</li>
                 </ul>
               </div>
             </div>
@@ -306,18 +294,16 @@
 
           <article class="relative flex w-full flex-col items-stretch md:flex-row md:items-center md:justify-between">
             <div class="order-2 mt-8 pl-10 md:order-1 md:mt-0 md:w-[45%] md:pl-0">
-              <div class="glass-card-strong rounded-xl p-8 transition-all duration-500 hover:shadow-[0_0_20px_rgba(0,219,233,0.15)]">
-                <h3 class="font-headline-md text-headline-md text-on-surface">Laboratorio de Innovación Intel BUAP</h3>
-                <p class="mt-1 font-body-md text-secondary-fixed">Investigación, administración y soporte técnico</p>
-                <ul class="mt-4 list-disc space-y-2 pl-5 font-body-md text-body-md text-on-surface-variant">
-                  <li>Caracterización funcional de sensores de efecto Hall orientados a aplicaciones como radar de proximidad.</li>
-                  <li>Desarrollo modular de sistemas para adquisición de señales bioeléctricas enfocados al monitoreo de signos vitales.</li>
-                  <li>Supervisión de recursos técnicos y gestión operativa del laboratorio.</li>
+              <div class="glass-card-strong card-hover-sand rounded-lg p-6 md:p-7">
+                <h3 class="font-headline-md text-headline-md text-on-surface">Laboratorio Intel BUAP</h3>
+                <p class="mt-1 font-body-md text-secondary-fixed">Innovación</p>
+                <ul class="mt-3 list-disc space-y-1.5 pl-4 font-body-md text-on-surface-variant">
+                  <li>Sensores Hall, adquisición bioeléctrica y operación del laboratorio.</li>
                 </ul>
               </div>
             </div>
             <div class="absolute left-4 z-10 flex items-center md:left-1/2 md:-translate-x-1/2">
-              <div class="h-4 w-4 rounded-full bg-primary-fixed-dim shadow-[0_0_15px_#00dbe9] ring-4 ring-background"></div>
+              <div class="h-3 w-3 rounded-full bg-primary-fixed-dim shadow-[0_0_12px_rgba(196,165,116,0.35)] ring-4 ring-background"></div>
             </div>
             <div class="order-1 pl-10 md:order-2 md:w-[45%] md:pl-0 md:text-right">
               <span class="mb-2 block font-label-caps text-label-caps text-on-surface-variant">2022 — 2023</span>
@@ -331,17 +317,14 @@
     </section>
 
     <!-- Proyectos -->
-    <section id="proyectos" class="mx-auto max-w-container-max px-margin-mobile pb-stack-lg pt-28 md:px-margin-desktop md:pt-32">
-      <header class="mb-16">
-        <h2 class="mb-4 hidden font-display-lg text-display-lg md:block">Proyectos <span class="text-primary-fixed-dim">destacados</span></h2>
-        <h2 class="mb-4 font-headline-lg-mobile text-headline-lg-mobile md:hidden">Proyectos <span class="text-primary-fixed-dim">destacados</span></h2>
-        <p class="max-w-2xl font-body-lg text-body-lg text-on-surface-variant">
-          Proyectos alineados con el documento <span class="text-on-surface">PROYECTO.pdf</span>: instrumentación, firmware embebido, análisis de datos y automatización con Google Apps Script. Puedes exportar capturas del PDF a <code class="rounded bg-white/10 px-1 font-label-caps text-[11px] text-primary-fixed">img/</code> y sustituir las URLs de ejemplo.
-        </p>
+    <section id="proyectos" class="mx-auto max-w-container-max px-margin-mobile pb-stack-lg pt-24 md:px-margin-desktop md:pt-28">
+      <header class="mb-10">
+        <h2 class="mb-2 font-headline-lg text-headline-lg md:text-display-lg">Proyectos</h2>
+        <p class="max-w-lg font-body-md text-on-surface-variant">Selección técnica (documento PROYECTO.pdf). Imágenes locales en <code class="rounded border border-outline/30 bg-surface-container px-1.5 py-0.5 font-label-caps text-[11px] text-primary-fixed-dim">img/</code>.</p>
       </header>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-12">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-12">
         <article class="project-card group md:col-span-8">
-          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-xl transition-all duration-300">
+          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-lg transition-all duration-300">
             <div class="aspect-video overflow-hidden">
               <img class="project-img-container h-full w-full object-cover" src="https://images.unsplash.com/photo-1447933601403-0c668ede90a2?auto=format&fit=crop&w=1400&q=80" alt="Monitoreo de tostado de café" width="1200" height="675" loading="lazy" />
             </div>
@@ -351,8 +334,8 @@
                 <span class="rounded bg-surface-variant px-3 py-1 font-label-caps text-label-caps text-secondary-fixed">PYTHON</span>
               </div>
               <h3 class="mb-1 font-headline-md text-headline-md text-primary-fixed-dim">Proyecto 1 · Monitoreo de tostado de café</h3>
-              <p class="mb-4 flex-grow font-body-md text-body-md text-on-surface-variant">
-                Desarrollo integral de un sistema de adquisición de señales para monitoreo en tiempo real, visualización y análisis de variables críticas durante el tostado de granos de café, orientado al control sensorial y térmico (perfiles de tostado, RoR, temperatura de grano y horno, apoyo con análisis en Python y reportes).
+              <p class="mb-4 flex-grow font-body-md text-on-surface-variant">
+                Adquisición en tiempo real y análisis de variables de tostado (perfil térmico, RoR, reportes en Python).
               </p>
               <div class="flex flex-wrap gap-3 font-label-caps text-label-caps text-on-surface-variant">
                 <span>Pandas · NumPy · Matplotlib</span>
@@ -361,7 +344,7 @@
           </div>
         </article>
         <article class="project-card group md:col-span-4">
-          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-xl transition-all duration-300">
+          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-lg transition-all duration-300">
             <div class="aspect-square overflow-hidden md:aspect-auto md:min-h-[200px]">
               <img class="project-img-container h-full min-h-[200px] w-full object-cover" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80" alt="Dosificación por peso" width="800" height="800" loading="lazy" />
             </div>
@@ -373,7 +356,7 @@
           </div>
         </article>
         <article class="project-card group md:col-span-6">
-          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-xl transition-all duration-300">
+          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-lg transition-all duration-300">
             <div class="aspect-video overflow-hidden">
               <img class="project-img-container h-full w-full object-cover" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80" alt="Control de válvulas industriales" width="1000" height="563" loading="lazy" />
             </div>
@@ -385,7 +368,7 @@
           </div>
         </article>
         <article class="project-card group md:col-span-6">
-          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-xl transition-all duration-300">
+          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-lg transition-all duration-300">
             <div class="aspect-video overflow-hidden">
               <img class="project-img-container h-full w-full object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Hoja de cálculo y conciliación" width="1000" height="563" loading="lazy" />
             </div>
@@ -397,7 +380,7 @@
           </div>
         </article>
         <article class="project-card group md:col-span-6">
-          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-xl transition-all duration-300">
+          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-lg transition-all duration-300">
             <div class="aspect-video overflow-hidden">
               <img class="project-img-container h-full w-full object-cover" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="Control de presupuestos" width="1000" height="563" loading="lazy" />
             </div>
@@ -409,7 +392,7 @@
           </div>
         </article>
         <article class="project-card group md:col-span-6">
-          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-xl transition-all duration-300">
+          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-lg transition-all duration-300">
             <div class="aspect-video overflow-hidden">
               <img class="project-img-container h-full w-full object-cover" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1000&q=80" alt="Cotizador web" width="1000" height="563" loading="lazy" />
             </div>
@@ -421,7 +404,7 @@
           </div>
         </article>
         <article class="project-card group md:col-span-6">
-          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-xl transition-all duration-300">
+          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-lg transition-all duration-300">
             <div class="aspect-video overflow-hidden">
               <img class="project-img-container h-full w-full object-cover" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80" alt="Instrumentación de flujo" width="1000" height="563" loading="lazy" />
             </div>
@@ -433,7 +416,7 @@
           </div>
         </article>
         <article class="project-card group md:col-span-6">
-          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-xl transition-all duration-300">
+          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-lg transition-all duration-300">
             <div class="aspect-video overflow-hidden">
               <img class="project-img-container h-full w-full object-cover" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=80" alt="Visión artificial e inspección" width="1000" height="563" loading="lazy" />
             </div>
@@ -445,7 +428,7 @@
           </div>
         </article>
         <article class="project-card group md:col-span-12">
-          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-xl transition-all duration-300 md:flex-row">
+          <div class="glass-card-strong interactive-glow flex h-full flex-col overflow-hidden rounded-lg transition-all duration-300 md:flex-row">
             <div class="aspect-video overflow-hidden md:w-1/2 md:min-h-[280px]">
               <img class="project-img-container h-full w-full object-cover md:min-h-full" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=1200&q=80" alt="ECG en investigación" width="1200" height="675" loading="lazy" />
             </div>
@@ -463,14 +446,14 @@
     </section>
 
     <!-- Habilidades -->
-    <section id="habilidades" class="border-t border-white/5 bg-surface-container-lowest/40 pb-stack-lg pt-28 md:pt-32">
+    <section id="habilidades" class="border-t border-outline/20 bg-surface-container-low/50 pb-stack-lg pt-24 md:pt-28">
       <div class="mx-auto max-w-container-max px-margin-mobile md:px-margin-desktop">
-        <header class="mb-16 max-w-3xl">
-          <h2 class="mb-6 font-display-lg text-headline-lg-mobile md:text-display-lg">Habilidades <span class="text-primary-fixed-dim">técnicas</span></h2>
-          <p class="font-body-lg text-body-lg text-on-surface-variant">Perfil técnico según CV: hardware, señales, embebidos, visualización de datos y automatización de procesos en hoja de cálculo.</p>
+        <header class="mb-12 max-w-2xl">
+          <h2 class="mb-3 font-headline-lg text-headline-lg md:text-display-lg">Habilidades</h2>
+          <p class="font-body-md text-on-surface-variant">Hardware, firmware, señales y herramientas de análisis.</p>
         </header>
         <div class="grid grid-cols-1 gap-gutter md:grid-cols-12">
-          <section class="glass-card-strong skill-glow rounded-xl p-8 transition-all duration-300 md:col-span-8">
+          <section class="glass-card-strong skill-glow rounded-lg p-8 transition-all duration-300 md:col-span-8">
             <div class="mb-8 flex items-center gap-4">
               <span class="material-symbols-outlined text-4xl text-primary-fixed-dim" aria-hidden="true">terminal</span>
               <h3 class="font-headline-lg text-headline-lg">Software y lenguajes</h3>
@@ -496,29 +479,29 @@
               </div>
             </div>
           </section>
-          <section class="glass-card-strong skill-glow flex flex-col justify-between rounded-xl p-8 transition-all duration-300 md:col-span-4">
+          <section class="glass-card-strong skill-glow flex flex-col justify-between rounded-lg p-8 transition-all duration-300 md:col-span-4">
             <div>
               <div class="mb-8 flex items-center gap-4">
                 <span class="material-symbols-outlined text-4xl text-primary-fixed-dim" aria-hidden="true">memory</span>
                 <h3 class="font-headline-md text-headline-md">Hardware</h3>
               </div>
               <div class="space-y-4">
-                <div class="rounded-lg border border-white/5 bg-white/5 p-4">
-                  <span class="font-label-caps text-label-caps text-secondary-fixed">MICROCONTROLADORES</span>
+                <div class="rounded-lg border border-outline/25 bg-surface-container/60 p-4">
+                  <span class="font-label-caps text-label-caps text-primary-fixed-dim">MICROCONTROLADORES</span>
                   <p class="mt-2 font-body-md text-on-surface-variant">ESP32, Arduino, STM32, PIC, Jetson, Raspberry Pi</p>
                 </div>
-                <div class="rounded-lg border border-white/5 bg-white/5 p-4">
-                  <span class="font-label-caps text-label-caps text-secondary-fixed">SEÑALES Y CONTROL</span>
-                  <p class="mt-2 font-body-md text-on-surface-variant">Diseño de hardware, PCB y adquisición de señales; filtros digitales y procesamiento de señales.</p>
+                <div class="rounded-lg border border-outline/25 bg-surface-container/60 p-4">
+                  <span class="font-label-caps text-label-caps text-primary-fixed-dim">SEÑALES</span>
+                  <p class="mt-2 font-body-md text-on-surface-variant">Diseño de hardware, PCB, adquisición, filtros digitales y procesamiento.</p>
                 </div>
-                <div class="rounded-lg border border-white/5 bg-white/5 p-4">
-                  <span class="font-label-caps text-label-caps text-secondary-fixed">PROTOCOLOS</span>
+                <div class="rounded-lg border border-outline/25 bg-surface-container/60 p-4">
+                  <span class="font-label-caps text-label-caps text-primary-fixed-dim">PROTOCOLOS</span>
                   <p class="mt-2 font-body-md text-on-surface-variant">UART, I2C, SPI, WiFi, Bluetooth, ZigBee</p>
                 </div>
               </div>
             </div>
           </section>
-          <section class="glass-card-strong skill-glow rounded-xl p-8 transition-all duration-300 md:col-span-12">
+          <section class="glass-card-strong skill-glow rounded-lg p-8 transition-all duration-300 md:col-span-12">
             <div class="mb-6 flex flex-wrap items-center gap-4">
               <span class="material-symbols-outlined text-3xl text-primary-fixed-dim" aria-hidden="true">design_services</span>
               <h3 class="font-headline-md text-headline-md">CAD</h3>
@@ -526,13 +509,13 @@
             <p class="font-body-md text-on-surface-variant">Diseño CAD: SketchUp, SolidWorks y FreeCAD</p>
           </section>
         </div>
-        <div class="mt-16">
-          <h3 class="mb-6 text-center font-label-caps text-label-caps text-on-surface-variant">STACK ADICIONAL</h3>
+        <div class="mt-10">
+          <h3 class="mb-4 text-center font-label-caps text-label-caps text-on-surface-variant">Stack</h3>
           <div class="flex flex-wrap justify-center gap-3">
-            <span class="rounded-full border border-white/5 bg-surface-container-high px-4 py-2 font-label-caps text-label-caps">IoT</span>
-            <span class="rounded-full border border-white/5 bg-surface-container-high px-4 py-2 font-label-caps text-label-caps">Automatización</span>
-            <span class="rounded-full border border-white/5 bg-surface-container-high px-4 py-2 font-label-caps text-label-caps">Instrumentación</span>
-            <span class="rounded-full border border-white/5 bg-surface-container-high px-4 py-2 font-label-caps text-label-caps">Procesamiento de señales</span>
+            <span class="rounded-full border border-outline/25 bg-surface-container-high/80 px-4 py-2 font-label-caps text-label-caps text-on-surface-variant">IoT</span>
+            <span class="rounded-full border border-outline/25 bg-surface-container-high/80 px-4 py-2 font-label-caps text-label-caps text-on-surface-variant">Automatización</span>
+            <span class="rounded-full border border-outline/25 bg-surface-container-high/80 px-4 py-2 font-label-caps text-label-caps text-on-surface-variant">Instrumentación</span>
+            <span class="rounded-full border border-outline/25 bg-surface-container-high/80 px-4 py-2 font-label-caps text-label-caps text-on-surface-variant">Señales</span>
           </div>
         </div>
       </div>
@@ -540,14 +523,14 @@
 
     <!-- Formación -->
     <section id="formacion" class="mx-auto max-w-container-max px-margin-mobile py-28 md:px-margin-desktop md:py-32">
-      <h2 class="mb-10 font-headline-lg text-headline-lg md:text-display-lg">Formación <span class="text-primary-fixed-dim">académica</span> e idiomas</h2>
-      <div class="glass-card rounded-xl p-8 md:p-10">
-        <ul class="space-y-6 font-body-lg text-body-lg text-on-surface-variant">
+      <h2 class="mb-6 font-headline-lg text-headline-lg md:text-display-lg">Formación e idiomas</h2>
+      <div class="glass-card rounded-lg p-8 md:p-10">
+        <ul class="space-y-4 font-body-md text-on-surface-variant md:text-body-lg">
           <li><strong class="text-on-surface">Licenciatura en Electrónica</strong> — graduación 2024. Benemérita Universidad Autónoma de Puebla (BUAP).</li>
           <li><strong class="text-on-surface">Técnico Universitario en Mecatrónica en Manufactura Flexible</strong> — graduación 2018. Universidad Tecnológica de Puebla (UTP).</li>
           <li><strong class="text-on-surface">Técnico en Mecatrónica</strong> — graduación 2016. Centro de Estudios Tecnológicos Industriales y de Servicio no. 104 (CETIS 104).</li>
         </ul>
-        <div class="mt-10 border-t border-white/10 pt-8">
+        <div class="mt-10 border-t border-outline/25 pt-8">
           <h3 class="mb-4 font-label-caps text-label-caps text-primary-fixed-dim">Idiomas</h3>
           <ul class="space-y-2 font-body-md text-on-surface-variant">
             <li><strong class="text-on-surface">Español</strong> — lengua nativa.</li>
@@ -558,16 +541,16 @@
     </section>
   </main>
 
-  <footer id="contacto" class="border-t border-white/5 bg-surface-container-lowest py-stack-lg">
+  <footer id="contacto" class="border-t border-outline/25 bg-surface-container-lowest py-stack-lg">
     <div class="mx-auto flex max-w-container-max flex-col items-center gap-stack-md px-margin-mobile md:flex-row md:justify-between md:px-margin-desktop">
       <div class="text-center md:text-left">
         <div class="font-headline-md text-headline-md text-on-surface">René Guzmán Dimayuga</div>
         <p class="mt-2 font-label-caps text-label-caps text-on-surface-variant">Puebla, Pue. · México</p>
       </div>
       <div class="flex flex-col items-center gap-2 font-body-md text-on-surface-variant md:items-end">
-        <a class="hover:text-primary-fixed transition-colors" href="mailto:rene.dimayuga98@gmail.com">rene.dimayuga98@gmail.com</a>
-        <a class="hover:text-primary-fixed transition-colors" href="tel:+522222381962">+52 222 238 1962</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant opacity-80 transition-opacity hover:text-primary-fixed hover:opacity-100" href="https://github.com/ReneGuzman" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="hover:text-primary-fixed-dim transition-colors" href="mailto:rene.dimayuga98@gmail.com">rene.dimayuga98@gmail.com</a>
+        <a class="hover:text-primary-fixed-dim transition-colors" href="tel:+522222381962">+52 222 238 1962</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant opacity-80 transition-opacity hover:text-primary-fixed-dim hover:opacity-100" href="https://github.com/ReneGuzman" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
       <p class="text-center font-label-caps text-label-caps text-on-surface-variant opacity-60 md:text-right">© <span id="year"></span> René Guzmán Dimayuga</p>
     </div>
